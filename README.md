@@ -24,7 +24,7 @@ When you select an image in the browser tab, it will be drawn to a canvas elemen
 
 The node server running the websocket connection is just a passthrough for messages and a host for the web interface. It sends the string along to the ESP, which intercepts it using the code in websockets.lua. the values are converted back to integers from hexadecimal and stored in a table, which is then concatted into a string for consumption by the ws2812 module. There's a line towards the end of the file that reads `num = num`. You can change the line to `num = num * 16` to multiply back your nibble values to the full 0-255 range, or use some other multiplier to adjust brightness. I've found that the color is truer on the strip at lower brightnesses.
 
-# Remaining improvements
+## Remaining improvements
 
 If the websocket connection goes down for the ESP, there's currently no good way to reconnect without restarting the device. I'm still trying to figure out if there's a better way for it to recover.
 
