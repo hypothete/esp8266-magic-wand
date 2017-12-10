@@ -1,0 +1,16 @@
+{
+  "name": "esp8266-magic-wand",
+  "version": "1.0.0",
+  "description": "a local webserver for talking to an ESP using websockets",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hypothete",
+  "license": "GPL",
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-formidable": "^1.0.0",
+    "ws": "^3.3.0"
+  }
+}
